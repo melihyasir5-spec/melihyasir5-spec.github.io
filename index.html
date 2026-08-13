@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+  DİL "tr" OLMAK ZORUNDA, "en" DEĞİL.
+
+  Vite iskeleti "en" ile geliyordu ve kimse dokunmamıştı. Görünmez bir kusur
+  üretiyordu: tarayıcı CSS `text-transform: uppercase` uygularken SAYFANIN
+  DİLİNE bakıyor. İngilizce kuralında "i" harfinin büyüğü "I"dır, yani nokta
+  düşer. Oyun 106 yerde `textTransform` kullanıyor ve hepsinde Türkçe İ
+  bozuluyordu: "NITELIK", "MEVKI", "KALITE", "TAKTIK".
+
+  "tr" ile tarayıcı doğru kuralı uygular (i -> İ, I -> ı). Metinlerin kendisine
+  dokunmak gerekmez; zaten doğru yazılmışlardı, bozan şey sunum katmanıydı.
+-->
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Dosya Masası / Kariyer Arşivi ekranı fontları (tasarım: Unbounded + Archivo + DM Mono) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;800&family=Archivo:wght@400;500;600;700;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <title>The Coach</title>
+    <script type="module" crossorigin src="/assets/index-NqpmBhQf.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D30f90Bb.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
